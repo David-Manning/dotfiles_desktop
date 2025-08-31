@@ -1,0 +1,19 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - DEFAULT APPS
+#----------------------------------------------------------
+
+# Define default apps - assign to variables so only this needs to be changed
+
+# User apps
+set $terminal foot 
+set $app_launcher rofi -show drun -theme Arc-Dark
+set $text_editor nvim
+set $browser firefox
+set $file_manager yazi
+set $screen_locker swaylock --config "~/.config/swaylock/config"
+set $email_client thunderbird
+
+# System services
+set $status_bar waybar
+set $notification_daemon dunst
+
