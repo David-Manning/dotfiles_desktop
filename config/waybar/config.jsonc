@@ -1,0 +1,119 @@
+
+{ 
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+        "sway/workspaces",
+        "custom/right-arrow-dark"
+    ],
+    "modules-center": [
+        "custom/left-arrow-dark",
+        "clock#1",
+        "custom/left-arrow-light",
+        "custom/left-arrow-dark",
+        "clock#2",
+        "custom/right-arrow-dark",
+        "custom/right-arrow-light",
+        "clock#3",
+        "custom/right-arrow-dark"
+    ],
+    "modules-right": [
+        "custom/left-arrow-dark",
+        "network",
+        "pulseaudio",
+        "cpu",
+        "battery",
+        "memory"
+    ],
+
+    "custom/left-arrow-dark": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/left-arrow-light": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right-arrow-dark": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/right-arrow-light": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+
+    "clock#1": {
+        "format": "{:%A}",
+        "tooltip": false,
+        "interval": 3600
+    },
+    "clock#2": {
+        "format": "{:%Y-%m-%d}",
+        "tooltip": false,
+        "interval": 3600
+    },
+
+    "clock#3": {
+        "format": "{:%H:%M:%S}",
+        "tooltip": false,
+        "interval": 1
+    },
+    
+
+    "pulseaudio": {
+        "format": "{icon} {volume:2}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "MUTE",
+        "format-icons": {
+            "headphones": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 5,
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol"
+    },
+    "memory": {
+        "interval": 5,
+        "format": "RAM {used:0.1f}G",
+        "format-icons": ["\uf85a"]
+    },
+    "cpu": {
+        "interval": 1,
+        "format": "CPU {usage:2}%",
+        "format-icons": ["\uec19"]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+		"interval": 1,
+        "format": "{icon}  {essid} {signalStrength}%",
+        "format-icons": ["\uf1eb", "\uf1eb", "\uf1eb"],
+        "format-ethernet": "\uf796",
+        "format-disconnected": "\uf127",
+        "format-alt": "{bandwidthUpBits}  {icon} {bandwidthDownBits}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+    }
+}
