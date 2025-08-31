@@ -16,6 +16,7 @@ git clone https://github.com/David-Manning/dotfiles ~/software/dotfiles
 ### Create Symlinks
 
 These files should be in `~/.config`, but are actually in `~/software/dotfiles`, so set up symlinks to tell Linux where the files are.
+Some symlinks will fail if the target directories already exist.
 
 ```bash
 ln -s ~/software/dotfiles/config/nvim ~/.config/nvim
