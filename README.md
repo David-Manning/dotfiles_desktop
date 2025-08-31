@@ -52,3 +52,8 @@ For full functionality, ensure the following are installed. This should not caus
 * JetBrainsMono Nerd Font for terminal (Fedora: `sudo dnf install jet-brains-mono-nerd-fonts`)
 * Twemoji for terminal emojis (Fedora: `sudo dnf install twitter-twemoji-fonts`) 
 
+## Licence
+
+This project is licensed under the MIT Licence - see the [LICENSE](LICENSE) file for details.
+
+
