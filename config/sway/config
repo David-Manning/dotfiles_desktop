@@ -1,0 +1,26 @@
+#----------------------------------------------------------
+# SWAY MAIN CONFIGURATION
+#----------------------------------------------------------
+# This file includes all modular config components
+# Order is important
+
+# Core definitions (load first)
+include ~/.config/sway/config.d/0_define_default_apps
+include ~/.config/sway/config.d/0_define_mod_keys
+
+# Hardware configuration
+include ~/.config/sway/config.d/1_inputs_keyboards
+include ~/.config/sway/config.d	1_inputs_mice
+include ~/.config/sway/config.d/2_outputs_monitors
+
+# Keybindings
+include ~/.config/sway/config.d/3_keybindings_programs_and_basics
+include ~/.config/sway/config.d/3_keybindings_workspaces
+include ~/.config/sway/config.d/3_keybindings_window_management
+include ~/.config/sway/config.d/3_keybindings_media_keys
+
+# Appearance and styling
+include ~/.config/sway/config.d/4_appearance
+
+# Startup applications (load last)
+include ~/.config/sway/config.d/99_autostart
