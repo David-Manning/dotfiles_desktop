@@ -1,0 +1,24 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - KEYBOARDS
+#----------------------------------------------------------
+
+# Keyboard settings
+
+# You can get the names of your inputs by running this in bash: swaymsg -t get_inputs
+
+# Set all keyboards to be British
+# Need this here in case I use a different keyboard - overridden by anything later
+input type:keyboard 
+{
+    xkb_layout "gb"
+}
+
+# My specific keyboard is British
+input "1133:16419:Logitech_Wireless_Keyboard_PID:4023" 
+{ 
+	xkb_layout "gb"
+}
+
+# Turn numlock on automatically
+input "1133:16419:Logitech_Wireless_Keyboard_PID:4023" xkb_numlock enabled
+
