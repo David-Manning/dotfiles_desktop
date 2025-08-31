@@ -1,0 +1,19 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - KEYBINDINGS - APPS AND BASICS
+#----------------------------------------------------------
+
+bindsym $primary_mod+Return exec $terminal
+bindsym $primary_mod+Shift+q kill
+bindsym $primary_mod+e exec "$app_launcher" 
+bindsym $primary_mod+Shift+c exec "~/.config/sway/scripts/close_open_waybar.sh"
+bindsym $primary_mod+b exec "$browser"
+bindsym $primary_mod+a exec "$file_manager"
+bindsym $primary_mod+t exec "$text_editor"
+bindsym $primary_mod+l exec "$screen_locker"
+bindsym $primary_mod+w exec "~/.config/sway/scripts/change_wifi.sh"
+bindsym $primary_mod+m exec "$email_client"
+
+bindsym Print exec grim ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png
+bindsym $primary_mod+Print exec grimshot save active ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png
+
+

@@ -1,0 +1,20 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - APPEARANCE
+#----------------------------------------------------------
+
+# Gaps between windows - only appears on a new workspace
+gaps inner 10
+smart_gaps off
+
+# Opacity
+set $opacity 1
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+
+
+# Title bar appearance
+font pango:"Roboto Mono Medium" 10
+titlebar_border_thickness 1
+titlebar_padding 5 2
+# client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
+

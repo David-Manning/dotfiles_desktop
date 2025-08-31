@@ -1,0 +1,44 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - KEYBINDINGS - WINDOW MANAGEMENT
+#----------------------------------------------------------
+
+# Move your focus around
+bindsym $primary_mod+Left focus left
+bindsym $primary_mod+Down focus down
+bindsym $primary_mod+Up focus up
+bindsym $primary_mod+Right focus right
+
+# Move the focused window with the same, but add Shift
+bindsym $primary_mod+Shift+Left move left
+bindsym $primary_mod+Shift+Down move down
+bindsym $primary_mod+Shift+Up move up
+bindsym $primary_mod+Shift+Right move right
+
+# Toggle between vertical and horizontal split
+bindsym $primary_mod+v splitt
+
+# Make the current focus fullscreen
+bindsym $primary_mod+f fullscreen
+
+
+# Resize windows - I don't do this very often
+mode "resize" 
+{
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $primary_mod+r mode "resize"
+
+

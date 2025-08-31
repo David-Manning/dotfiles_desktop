@@ -1,0 +1,11 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - DEFINE MOD KEYS
+#----------------------------------------------------------
+
+# Need to load this early or keybdings won't work
+
+# I use the Windows/super key. Use Mod1 for Alt (useful for WSL).
+set $alt Mod1
+set $mod Mod4
+set $primary_mod $mod
+

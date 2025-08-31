@@ -1,0 +1,10 @@
+#----------------------------------------------------------
+# SWAY CONFIGURATION - AUTOSTART
+#----------------------------------------------------------
+
+# Start notification manager
+exec $notification_daemon
+
+# Start statusbar
+exec $status_bar
+
