@@ -33,6 +33,13 @@ ln -s ~/software/dotfiles/config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/software/dotfiles/config/discord ~/.config/discord
 ```
 
+Also remove `~/.zshrc` and symlink to the .zshrc file in the repo.
+
+```bash
+rm ~/.zshrc
+ln -s ~/software/dotfiles/.zshrc ~/.zshrc
+```
+
 ### Optional Dependencies
 
 For full functionality, ensure the following are installed. This should not cause major issues but will make some features not work and some fonts not display (including emojis).
