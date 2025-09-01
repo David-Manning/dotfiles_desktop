@@ -50,14 +50,41 @@ ln -s ~/software/dotfiles/.zshrc ~/.zshrc
 
 ### Optional Dependencies
 
-For full functionality, ensure the following are installed. This should not cause major issues but will make some features not work and some fonts not display (including emojis).
+The following packages are only required if you want the full Neovim experience or proper font support in your terminal and window manager.
 
-* R (Fedora: `sudo dnf install R`)
-* rstan (R package)
-* pdflatex (Fedora: `sudo dnf install texlive`)
-* Roboto Mono font for Sway title bar (Fedora: `sudo dnf install roboto-mono-nerd-fonts`)
-* JetBrainsMono Nerd Font for terminal (Fedora: `sudo dnf install jet-brains-mono-nerd-fonts`)
-* Twemoji for terminal emojis (Fedora: `sudo dnf install twitter-twemoji-fonts`) 
+#### Neovim
+Neovim will perform a quick “dummy run” to validate the syntax of your files on save (e.g. checking for missing brackets that stop compilation).
+To enable this check, you need to install the relevant languages.
+
+Enable the CRAN repo on Fedora:
+```bash
+sudo dnf copr enable iucar/cran
+```
+
+After enabling the repository, install the packages:
+```bash
+sudo dnf install R
+sudo dnf install R-CRAN-rstan
+sudo dnf install texlive
+```
+
+Non-Fedora users can install rstan by running `install.packages("rstan")` directly in R.
+
+#### Fonts
+
+These fonts are used in the window title bar and in the terminal and to make emojis display in the terminal.
+
+Install nerd fonts repo:
+```bash
+sudo dnf copr enable aquacash5/nerd-fonts
+```
+
+Install fonts:
+```bash
+sudo dnf install roboto-mono-nerd-fonts
+sudo dnf install jet-brains-mono-nerd-fonts
+sudo dnf install twitter-twemoji-fonts
+```
 
 ## Licence
 
