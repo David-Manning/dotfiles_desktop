@@ -6,8 +6,15 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 
 The files are set up in `~/software/dotfiles/config`
 
-### Cloning the repo
+### Install dotfiles
 
+Backup first
+```bash
+mkdir ~/software/dotfiles_backup
+cp -r ~/software/dotfiles ~/software/dotfiles_backup
+```
+
+Then clone repo
 ```bash
 mkdir -p ~/software
 git clone https://github.com/David-Manning/dotfiles ~/software/dotfiles
