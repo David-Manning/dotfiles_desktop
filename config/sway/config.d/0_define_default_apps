@@ -10,10 +10,11 @@ set $app_launcher rofi -show drun -theme Arc-Dark
 set $text_editor nvim
 set $browser firefox
 set $file_manager yazi
-set $screen_locker swaylock --config "~/.config/swaylock/config"
 set $email_client thunderbird
 
 # System services
 set $status_bar waybar
 set $notification_daemon dunst
+set $screen_locker swaylock -k -l -F --config "~/.config/swaylock/config"
+
 
