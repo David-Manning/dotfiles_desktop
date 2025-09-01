@@ -30,6 +30,7 @@ require("config.ui.indent").setup()
 
 -- Load language-specific configurations
 require("languages.json.validate")
+require("languages.yaml.validate")
 require("languages.stan.check_blank_line_at_end")
 require("languages.stan.validate")
 require("languages.python.validate")
