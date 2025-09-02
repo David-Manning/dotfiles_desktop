@@ -7,6 +7,12 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 Basic state:
 <img src="assets/screenshots/desktop_default.png" alt="Desktop Default" width="800">
 
+
+Status bar:
+<img src="assets/screenshots/status_bar.png" alt="Status Bar" width="800">
+
+The date is centred on screen but appears off-centre here to keep all elements readable.
+
 ## Installation
 
 The files are set up in `~/software/dotfiles/config`
