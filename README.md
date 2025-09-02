@@ -5,8 +5,7 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 ## Screenshots
 
 Basic state:
-
-![Clean desktop after boot](assets/screenshots/desktop_default.png)
+<img src="assets/screenshots/desktop_default.png" alt="Desktop Default" width="800">
 
 ## Installation
 
