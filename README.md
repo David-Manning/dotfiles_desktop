@@ -91,6 +91,7 @@ After enabling the repository, install the packages:
 sudo dnf install R
 sudo dnf install R-CRAN-rstan
 sudo dnf install texlive
+sudo dnf install julia
 ```
 
 Non-Fedora users can install rstan by running `install.packages("rstan")` directly in R.
