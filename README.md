@@ -4,15 +4,15 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 
 ## Details
 
-* **OS**: Fedora
-* **Window manager**: Sway
-* **Status bar**: Waybar
-* **Notifications**: Dunst
-* **Terminal**: Foot
-* **Editor**: Neovim
+* **OS**: [Fedora](https://www.fedoraproject.org)
+* **Window manager**: [Sway](https://www.github.com/swaywm/sway)
+* **Status bar**: [Waybar](https://www.github.com/Alexays/Waybar)
+* **Notifications**: [Dunst](https://www.github.com/dunst-project/dunst)
+* **Terminal**: [Foot](https://www.codeberg.org/dnkl/foot)
+* **Editor**: [Neovim](https://www.github.com/neovim/Neovim)
 * **IDE**: None
-* **File manager**: Yazi
-* **Spotify client**: spotify_player
+* **File manager**: [Yazi](https://www.github.com/sxyyazi/yazi)
+* **Spotify client**: [spotify_player](https://www.github.com/aome510/spotify-player)
 * **Browser**: Firefox
 
 ## Screenshots
