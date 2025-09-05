@@ -2,6 +2,19 @@
 
 These are my dotfiles for Fedora Linux with Sway window manager. They work for me and my workflow. They may not work for you and your workflow. Dotfiles are very personal. I recommend against copying anyone's dotfiles directly and in favour of looking at the screenshots, reading the files, and deciding what would work for you. I also recommend looking at other people's dotfiles and see how they solve the same problems.
 
+## Details
+
+* **OS**: Fedora
+* Window manager: Sway
+* Status bar: Waybar
+* Notifications: Dunst
+* Terminal: Foot
+* Editor: Neovim
+* IDE: None
+* File manager: Yazi
+* Spotify client: spotify_player
+* Browser: Firefox
+
 ## Screenshots
 
 Basic state:
