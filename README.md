@@ -63,6 +63,7 @@ ln -s ~/software/dotfiles/config/yazi ~/.config/yazi
 ln -s ~/software/dotfiles/config/gh ~/.config/gh
 ln -s ~/software/dotfiles/config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/software/dotfiles/config/discord ~/.config/discord
+ln -s ~/software/dotfiles/config/spotify-player ~/.config/spotify-player
 ```
 
 Also remove `~/.zshrc` and symlink to the .zshrc file in the repo.
