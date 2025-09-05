@@ -4,16 +4,18 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 
 ## Details
 
-* **OS**: Fedora
-* Window manager: Sway
-* Status bar: Waybar
-* Notifications: Dunst
-* Terminal: Foot
-* Editor: Neovim
-* IDE: None
-* File manager: Yazi
-* Spotify client: spotify_player
-* Browser: Firefox
+* **OS**: [Fedora](https://www.fedoraproject.org)
+* **Window manager**: [Sway](https://www.github.com/swaywm/sway)
+* **Status bar**: [Waybar](https://www.github.com/Alexays/Waybar)
+* **Notifications**: [Dunst](https://www.github.com/dunst-project/dunst)
+* **Terminal**: [Foot](https://www.codeberg.org/dnkl/foot)
+* **Editor**: [Neovim](https://www.github.com/neovim/Neovim)
+* **IDE**: None
+* **File manager**: [Yazi](https://www.github.com/sxyyazi/yazi)
+* **Spotify client**: [spotify_player](https://www.github.com/aome510/spotify-player)
+* **Browser**: Firefox
+* **DB Client**: [Rainfrog](https://github.com/achristmascarl/rainfrog)
+* **CSV Reader**: [csvlens](https://www.github.com/YS-L/csvlens)
 
 ## Screenshots
 
@@ -64,6 +66,7 @@ ln -s ~/software/dotfiles/config/gh ~/.config/gh
 ln -s ~/software/dotfiles/config/mimeapps.list ~/.config/mimeapps.list
 ln -s ~/software/dotfiles/config/discord ~/.config/discord
 ln -s ~/software/dotfiles/config/spotify-player ~/.config/spotify-player
+ln -s ~/software/dotfiles/config/rainfrog ~/.config/rainfrog
 ```
 
 Also remove `~/.zshrc` and symlink to the .zshrc file in the repo.
@@ -110,6 +113,32 @@ sudo dnf install roboto-mono-nerd-fonts
 sudo dnf install jet-brains-mono-nerd-fonts
 sudo dnf install twitter-twemoji-fonts
 ```
+
+#### AWS SAM CLI
+
+I use AWS SAM CLI to develop on AWS Lambda.
+
+```bash
+curl -L "https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip" -o /tmp/aws-sam-cli.zip -sS
+unzip /tmp/aws-sam-cli.zip -d /tmp/sam-installation -q
+sudo /tmp/sam-installation/install
+rm /tmp/aws-sam-cli.zip
+rm -rf /tmp/sam-installation
+sam --version
+```
+
+#### Julia
+Install Julia via Juliaup:
+```bash
+curl -fsSL https://install.julialang.org | sh
+```
+Then choose "customise installation"
+
+* Enter the folder where you want to install Juliaup: default
+* Do you want to add the Julia binaries to your PATH?: no (already in custom zshrc)
+* Do you want to add channel specific symlinks?: no
+* Enter minutes between check for new version at julia startup: 0
+* Enter minutes between check for new version by a background task: 0
 
 ## Licence
 
