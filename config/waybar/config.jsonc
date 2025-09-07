@@ -84,7 +84,7 @@
         "on-click-right": "pavucontrol"
     },
     "memory": {
-        "interval": 5,
+        "interval": 1,
         "format": "RAM {used:0.1f}G",
         "format-icons": ["\uf85a"]
     },
