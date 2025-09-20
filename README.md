@@ -15,6 +15,7 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 * **Spotify client**: [spotify_player](https://www.github.com/aome510/spotify-player)
 * **Browser**: Firefox
 * **DB Client**: [Rainfrog](https://github.com/achristmascarl/rainfrog)
+* **CSV Reader**: [csvlens](https://www.github.com/YS-L/csvlens)
 
 ## Screenshots
 
