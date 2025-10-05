@@ -34,7 +34,7 @@ x-scheme-handler/mailto=org.mozilla.thunderbird.desktop;
 [Default Applications]
 application/javascript=nvim.desktop;
 application/json=nvim.desktop;
-application/pdf=firefox.desktop;
+application/pdf=org.mozilla.firefox.desktop;
 application/x-docbook+xml=nvim.desktop;
 application/x-java-source=nvim.desktop;
 application/x-perl=nvim.desktop;
