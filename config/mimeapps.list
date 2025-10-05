@@ -104,3 +104,7 @@ text/x-tex=nvim.desktop;
 text/x-yaml=nvim.desktop;
 x-scheme-handler/mailto=org.mozilla.thunderbird.desktop;
 image/png=org.kde.gwenview.desktop
+video/x-matroska=vlc.desktop
+video/mp4=vlc.desktop
+video/x-msvideo=vlc.desktop
+video/quicktime=vlc.desktop
