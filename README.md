@@ -115,6 +115,20 @@ sudo dnf install jet-brains-mono-nerd-fonts
 sudo dnf install twitter-twemoji-fonts
 ```
 
+#### AWS SAM CLI
+
+I use AWS SAM CLI to develop on AWS Lambda.
+
+```bash
+curl -L "https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip" -o /tmp/aws-sam-cli.zip -sS
+unzip /tmp/aws-sam-cli.zip -d /tmp/sam-installation -q
+sudo /tmp/sam-installation/install
+rm /tmp/aws-sam-cli.zip
+rm -rf /tmp/sam-installation
+sam --version
+```
+
+
 ## Licence
 
 This project is licensed under the MIT Licence - see the [LICENSE](LICENSE) file for details.
