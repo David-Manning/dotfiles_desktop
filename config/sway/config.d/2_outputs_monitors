@@ -6,7 +6,7 @@
 
 ### Output configuration
 # Wallpaper
-output * bg /home/david/.config/sway/wallpapers/Forest.png fill
+output * bg ~/.config/sway/wallpapers/Forest.png fill
 #@datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill 
 
 # Configure HDMI display resolution
