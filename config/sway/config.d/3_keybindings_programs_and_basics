@@ -13,7 +13,7 @@ bindsym $primary_mod+l exec "$screen_locker"
 bindsym $primary_mod+w exec "~/.config/sway/scripts/change_wifi.sh"
 bindsym $primary_mod+m exec "$email_client"
 
-bindsym Print exec grim ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png
-bindsym $primary_mod+Print exec grimshot save active ~/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png
+bindsym Print exec ~/.config/sway/scripts/full_screenshot.sh
+bindsym $primary_mod+Print exec ~/.config/sway/scripts/container_screenshot.sh
 
 
