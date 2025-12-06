@@ -5,9 +5,5 @@
 # Saves to screenshot folder
 # Intended to be used for keybindings
 
-grim_output="$HOME/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M:%S).png"
-if mkdir -p "$(dirname "$grim_output")" && grim - | tee "$grim_output" | wl-copy; then
-    notify-send "Screenshot saved" "$grim_output"
-else
-    notify-send -u critical "Screenshot failed"
-fi
+grim_output="$HOME/Pictures/Screenshots/$(date +%Y-%m-%d-%H%M%S).png"
+mkdir -p "$(dirname "$grim_output")" && grim - | tee "$grim_output" | wl-copy || notify-send -u critical "Screenshot failed"
