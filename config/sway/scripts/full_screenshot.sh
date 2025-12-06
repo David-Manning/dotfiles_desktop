@@ -5,4 +5,9 @@
 # Saves to screenshot folder
 # Intended to be used for keybindings
 
-grim - | tee >(wl-copy) >(grim_output=$(date +Screenshot_%Y-%m-%d_%H:%M:%S_Workspace_$(hyprctl activewindow -j | jq '.workspace.name' | tr -d '"').png) && mv /tmp/$grim_output /home/david/Pictures/Screenshots/$grim_output)
+grim_output="$HOME/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H:%M:%S).png"
+if mkdir -p "$(dirname "$grim_output")" && grim - | tee "$grim_output" | wl-copy; then
+    notify-send "Screenshot saved" "$grim_output"
+else
+    notify-send -u critical "Screenshot failed"
+fi
