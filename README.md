@@ -94,7 +94,6 @@ After enabling the repository, install the packages:
 sudo dnf install R
 sudo dnf install R-CRAN-rstan
 sudo dnf install texlive
-sudo dnf install julia
 ```
 
 Non-Fedora users can install rstan by running `install.packages("rstan")` directly in R.
@@ -128,6 +127,18 @@ rm -rf /tmp/sam-installation
 sam --version
 ```
 
+#### Julia
+Install Julia via Juliaup:
+```bash
+curl -fsSL https://install.julialang.org | sh
+```
+Then choose "customise installation"
+
+* Enter the folder where you want to install Juliaup: default
+* Do you want to add the Julia binaries to your PATH?: no (already in custom zshrc)
+* Do you want to add channel specific symlinks?: no
+* Enter minutes between check for new version at julia startup: 0
+* Enter minutes between check for new version by a background task: 0
 
 ## Licence
 
