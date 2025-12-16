@@ -32,6 +32,21 @@ The date is centred on screen but appears off-centre here to keep all elements r
 
 The files are set up in `~/software/dotfiles_desktop/config`
 
+### Install GitHub
+
+Everything is saved and linked to GitHub.
+
+Install gh (GitHub client):
+
+```bash
+sudo dnf install gh -y
+```
+
+Run this to create auth tokens (it will automatically open a browser to authenticate):
+```bash
+gh auth login --hostname github.com --git-protocol ssh --web --skip-ssh-key
+```
+
 ### Install dotfiles
 
 Backup first
