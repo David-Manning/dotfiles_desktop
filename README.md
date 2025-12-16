@@ -30,50 +30,41 @@ The date is centred on screen but appears off-centre here to keep all elements r
 
 ## Installation
 
-The files are set up in `~/software/dotfiles/config`
+The files are set up in `~/software/dotfiles_desktop/config`
 
 ### Install dotfiles
 
 Backup first
 ```bash
-mkdir ~/software/dotfiles_backup
-cp -r ~/software/dotfiles ~/software/dotfiles_backup
+mkdir ~/software/dotfiles_desktop_backup
+cp -r ~/software/dotfiles_desktop ~/software/dotfiles_desktop_backup
 ```
 
 Then clone repo
 ```bash
 mkdir -p ~/software
-git clone https://github.com/David-Manning/dotfiles ~/software/dotfiles
+git clone https://github.com/David-Manning/dotfiles_desktop ~/software/dotfiles_desktop
 ```
 
 ### Create Symlinks
 
-These files should be in `~/.config`, but are actually in `~/software/dotfiles`, so set up symlinks to tell Linux where the files are.
+These files should be in `~/.config`, but are actually in `~/software/dotfiles_desktop`, so set up symlinks to tell Linux where the files are.
 Some symlinks will fail if the target directories already exist.
 
 ```bash
-ln -s ~/software/dotfiles/config/nvim ~/.config/nvim
-ln -s ~/software/dotfiles/config/waybar ~/.config/waybar
-ln -s ~/software/dotfiles/config/swaylock ~/.config/swaylock
-ln -s ~/software/dotfiles/config/foot ~/.config/foot
-ln -s ~/software/dotfiles/config/sway ~/.config/sway
-ln -s ~/software/dotfiles/config/zshrc ~/.config/zshrc
-ln -s ~/software/dotfiles/config/dunst ~/.config/dunst
-ln -s ~/software/dotfiles/config/kitty ~/.config/kitty
-ln -s ~/software/dotfiles/config/rofi ~/.config/rofi
-ln -s ~/software/dotfiles/config/yazi ~/.config/yazi
-ln -s ~/software/dotfiles/config/gh ~/.config/gh
-ln -s ~/software/dotfiles/config/mimeapps.list ~/.config/mimeapps.list
-ln -s ~/software/dotfiles/config/discord ~/.config/discord
-ln -s ~/software/dotfiles/config/spotify-player ~/.config/spotify-player
-ln -s ~/software/dotfiles/config/rainfrog ~/.config/rainfrog
-```
-
-Also remove `~/.zshrc` and symlink to the .zshrc file in the repo.
-
-```bash
-rm ~/.zshrc
-ln -s ~/software/dotfiles/.zshrc ~/.zshrc
+ln -s ~/software/dotfiles_desktop/config/nvim ~/.config/nvim
+ln -s ~/software/dotfiles_desktop/config/waybar ~/.config/waybar
+ln -s ~/software/dotfiles_desktop/config/swaylock ~/.config/swaylock
+ln -s ~/software/dotfiles_desktop/config/foot ~/.config/foot
+ln -s ~/software/dotfiles_desktop/config/sway ~/.config/sway
+ln -s ~/software/dotfiles_desktop/config/dunst ~/.config/dunst
+ln -s ~/software/dotfiles_desktop/config/kitty ~/.config/kitty
+ln -s ~/software/dotfiles_desktop/config/rofi ~/.config/rofi
+ln -s ~/software/dotfiles_desktop/config/yazi ~/.config/yazi
+ln -s ~/software/dotfiles_desktop/config/mimeapps.list ~/.config/mimeapps.list
+ln -s ~/software/dotfiles_desktop/config/discord ~/.config/discord
+ln -s ~/software/dotfiles_desktop/config/spotify-player ~/.config/spotify-player
+ln -s ~/software/dotfiles_desktop/config/rainfrog ~/.config/rainfrog
 ```
 
 ### Optional Dependencies
@@ -116,7 +107,7 @@ sudo dnf install twitter-twemoji-fonts
 
 #### AWS SAM CLI
 
-I use AWS SAM CLI to develop on AWS Lambda.
+I use AWS SAM CLI to develop on AWS.
 
 ```bash
 curl -L "https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip" -o /tmp/aws-sam-cli.zip -sS
