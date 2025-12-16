@@ -1,12 +1,12 @@
-
-return {
-  {
-    'neovim/nvim-lspconfig',
-    config = function()
-      local lspconfig = require('lspconfig')
+return {}
+-- return {
+-- {
+--   'neovim/nvim-lspconfig',
+--    config = function()
+--      local lspconfig = require('lspconfig')
       
       -- R language server
-      lspconfig.r_language_server.setup({})
-    end
-  }
-}
+--      lspconfig.r_language_server.setup({})
+--    end
+--  }
+--}
