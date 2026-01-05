@@ -8,3 +8,9 @@ exec $notification_daemon
 # Start statusbar
 exec $status_bar
 
+# Pass display environment to systemd/DBus for portals
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# Prefer dark mode for GTK apps and Firefox
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
