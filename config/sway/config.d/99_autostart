@@ -8,3 +8,6 @@ exec $notification_daemon
 # Start statusbar
 exec $status_bar
 
+# Pass display environment to systemd/DBus for portals
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
