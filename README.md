@@ -104,6 +104,8 @@ sudo dnf install texlive
 
 Non-Fedora users can install rstan by running `install.packages("rstan")` directly in R.
 
+Installing treesitter: `npm install -g tree-sitter-cli`
+
 #### Fonts
 
 These fonts are used in the window title bar and in the terminal and to make emojis display in the terminal.
