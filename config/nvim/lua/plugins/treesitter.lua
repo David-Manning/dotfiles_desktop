@@ -45,7 +45,7 @@ return {
             -- Install parsers
             require("nvim-treesitter").install({
                 "stan",
-                "r", "rnoweb",
+                "r",
                 "python",
                 "lua",
                 "vim", "vimdoc",
@@ -65,7 +65,7 @@ return {
             vim.api.nvim_create_autocmd("FileType", {
                 pattern = {
                     "stan",
-                    "r", "rnoweb",
+                    "r",
                     "python",
                     "lua",
                     "vim", "vimdoc",
