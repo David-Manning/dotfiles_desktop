@@ -104,7 +104,7 @@ sudo dnf install texlive
 
 Non-Fedora users can install rstan by running `install.packages("rstan")` directly in R.
 
-Installing treesitter: `npm install -g tree-sitter-cli`
+To install treesitter, run `npm install -g tree-sitter-cli`.
 
 #### Fonts
 
