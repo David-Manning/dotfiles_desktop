@@ -1,5 +1,29 @@
 -- Python syntax check script
 
+
+-- Function to find the Python executable
+local function get_python_executable()
+    -- Check for virtual environment first
+    local venv = os.getenv("VIRTUAL_ENV")
+    if venv then
+        local sep = package.config:sub(1, 1) -- Gets OS path separator
+        local venv_python = venv .. sep .. (sep == "\\" and "Scripts" or "bin") .. sep .. "python"
+        if vim.fn.executable(venv_python) == 1 then
+            return venv_python
+        end
+    end
+    
+    -- Try common executable names in order of preference
+    local candidates = {"python3", "python"}
+    for _, cmd in ipairs(candidates) do
+        if vim.fn.executable(cmd) == 1 then
+            return cmd
+        end
+    end
+    
+    return nil
+end
+
 -- Function to run Python syntax check
 local function python_check_syntax()
   local current_file = vim.fn.expand('%:p')
@@ -40,7 +64,7 @@ except Exception as e:
   ]], current_file:gsub("'", "\\'"), current_file:gsub("'", "\\'"))
   
   -- Build command
-  local cmd = {'python3', '-c', python_script}
+  local cmd = {get_python_executable(), '-c', python_script}
   
   local output_lines = {}
   
