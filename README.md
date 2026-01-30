@@ -148,6 +148,16 @@ Then choose "customise installation"
 * Enter minutes between check for new version at julia startup: 0
 * Enter minutes between check for new version by a background task: 0
 
+### Minimal zshrc
+**ON SERVERS ONLY**:
+Link to the minimal zshrc. This is intended to be a minimal zshrc, not for desktop use.
+
+```
+ln -s ~/software/dotfiles_desktop/config/zshrc ~/.config/zshrc
+rm ~/.zshrc
+ln -s ~/software/dotfiles_desktop/.zshrc ~/.zshrc
+```
+
 ## Licence
 
 This project is licensed under the MIT Licence - see the [LICENSE](LICENSE) file for details.
