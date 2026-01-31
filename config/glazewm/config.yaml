@@ -19,12 +19,12 @@ workspaces:
 
 gaps:
     scale_with_dpi: true
-    inner_gap: "20px"
+    inner_gap: "10px"
     outer_gap:
-        top: "80px"
-        bottom: "20px"
-        right: "20px"
-        left: "20px"
+        top: "60px"
+        bottom: "10px"
+        right: "10px"
+        left: "10px"
 
 
 window_effects:
@@ -32,6 +32,7 @@ window_effects:
         border:
             enabled: true
             color: "#8dbcff"
+
     corner_style:
         enabled: false
         style: "square"
