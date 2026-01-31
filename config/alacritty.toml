@@ -1,0 +1,14 @@
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+size = 10.0
+
+[scrolling]
+history = 16384
+multiplier = 3
+
+[cursor]
+style.shape = "Block"
+style.blinking = "Never"
+
+[selection]
+save_to_clipboard = true
