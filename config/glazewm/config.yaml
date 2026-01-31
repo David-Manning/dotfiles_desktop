@@ -32,6 +32,9 @@ window_effects:
         border:
             enabled: true
             color: "#8dbcff"
+    corner_style:
+        enabled: false
+        style: "square"
 
 window_rules:
     - commands: ["ignore"]
