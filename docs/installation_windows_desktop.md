@@ -9,7 +9,6 @@ winget install `
     glzr-io.glazewm `
     glzr-io.zebar `
     Flow-Launcher.Flow-Launcher `
-    AutoHotkey.Autohotkey `
     JuliaLang.Juliaup `
     Rustlang.Rustup `
     RProject.R `
@@ -69,7 +68,6 @@ This requires admin rights.
 New-Item -ItemType SymbolicLink -Path ~\.config\nvim -Target ~\software\dotfiles_desktop\config\nvim
 New-Item -ItemType SymbolicLink -Path ~\.glzr\glazewm -Target ~\software\dotfiles_desktop\config\glazewm
 New-Item -ItemType SymbolicLink -Path ~\.glzr\zebar -Target ~\software\dotfiles_desktop\config\zebar
-New-Item -ItemType SymbolicLink -Path ~\.config\autohotkey -Target ~\software\dotfiles_desktop\config\autohotkey
 New-Item -ItemType SymbolicLink -Path ~\.config\gh -Target ~\software\dotfiles_desktop\config\gh
 New-Item -ItemType SymbolicLink -Path ~\.config\alacritty -Target ~\software\dotfiles_desktop\config\alacritty
 ```
