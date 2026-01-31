@@ -22,7 +22,7 @@ winget install `
     Git.Git `
     OpenJS.NodeJS `
     Amazon.AWSCLI `
-    Amazon.SAMCommandLineInterface `
+    Amazon.SAM-CLI `
     eza-community.eza `
     YS-L.csvlens
 ```
