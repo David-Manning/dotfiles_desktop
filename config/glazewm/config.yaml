@@ -34,8 +34,9 @@ window_effects:
             color: "#8dbcff"
 
 window_rules:
-    - command: "ignore"
-      match_process_name: "zebar"
+    - commands: ["ignore"]
+      match:
+        - window_process: { equals: "zebar" }
 
 keybindings:
     # Activate next window in a given direction
