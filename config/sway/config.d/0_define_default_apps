@@ -5,7 +5,7 @@
 # Define default apps - assign to variables so only this needs to be changed
 
 # User apps
-set $terminal foot 
+set $terminal alacritty
 set $app_launcher rofi -show drun -theme Arc-Dark
 set $text_editor nvim
 set $browser firefox
