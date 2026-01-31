@@ -50,6 +50,12 @@ Install tree-sitter-cli:
 npm install -g tree-sitter-cli
 ```
 
+Install Cargo:
+
+```
+cargo install rainfrog
+```
+
 ## Create folder and clone repo
 ```
 mkdir ~/software
