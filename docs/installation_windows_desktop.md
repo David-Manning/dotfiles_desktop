@@ -67,7 +67,8 @@ This tells Windows to use the links in this repo, rather than the default.
 This requires admin rights.
 ```
 New-Item -ItemType SymbolicLink -Path ~\.config\nvim -Target ~\software\dotfiles_desktop\config\nvim
-New-Item -ItemType SymbolicLink -Path ~\.config\glazewm -Target ~\software\dotfiles_desktop\config\glazewm
+New-Item -ItemType SymbolicLink -Path ~\.glzr\glazewm -Target ~\software\dotfiles_desktop\config\glazewm
+New-Item -ItemType SymbolicLink -Path ~\.glzr\zebar -Target ~\software\dotfiles_desktop\config\zebar
 New-Item -ItemType SymbolicLink -Path ~\.config\autohotkey -Target ~\software\dotfiles_desktop\config\autohotkey
 New-Item -ItemType SymbolicLink -Path ~\.config\gh -Target ~\software\dotfiles_desktop\config\gh
 New-Item -ItemType SymbolicLink -Path ~\.config\alacritty -Target ~\software\dotfiles_desktop\config\alacritty
