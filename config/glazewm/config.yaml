@@ -1,0 +1,131 @@
+general:
+    startup_commands:
+        - "shell-exec zebar"
+    shutdown_commands: []
+    config_reload_commands: []
+    focus_follows_cursor: true
+
+workspaces:
+    - name: "1"
+    - name: "2"
+    - name: "3"
+    - name: "4"
+    - name: "5"
+    - name: "6"
+    - name: "7"
+    - name: "8"
+    - name: "9"
+    - name: "10"
+
+gaps:
+    scale_with_dpi: true
+    inner_gap: "10px"
+    outer_gap:
+        top: "60px"
+        bottom: "10px"
+        right: "10px"
+        left: "10px"
+
+
+window_effects:
+    focused_window:
+        border:
+            enabled: true
+            color: "#8dbcff"
+
+    corner_style:
+        enabled: false
+        style: "square"
+
+window_rules:
+    - commands: ["ignore"]
+      match:
+        - window_process: { equals: "zebar" }
+
+keybindings:
+    # Activate next window in a given direction
+    - commands: ['focus --direction left']
+      bindings: ['alt+left']
+    - commands: ['focus --direction right']
+      bindings: ['alt+right']
+    - commands: ['focus --direction up']
+      bindings: ['alt+up']
+    - commands: ['focus --direction down']
+      bindings: ['alt+down']
+
+    # Move current window in a given direction
+    - commands: ['move --direction left']
+      bindings: ['alt+shift+left']
+    - commands: ['move --direction right']
+      bindings: ['alt+shift+right']
+    - commands: ['move --direction up']
+      bindings: ['alt+shift+up']
+    - commands: ['move --direction down']
+      bindings: ['alt+shift+down']
+
+     # Toggle tiling direction
+    - commands: ['toggle-tiling-direction']
+      bindings: ['alt+v']
+
+    # Toggle fullscreen
+    - commands: ['toggle-fullscreen']
+      bindings: ['alt+f']
+
+    # Close current window
+    - commands: ['close']
+      bindings: ['alt+shift+q']
+
+    # Switch workspace
+    - commands: ['focus --workspace 1']
+      bindings: ['alt+1']
+    - commands: ['focus --workspace 2']
+      bindings: ['alt+2']
+    - commands: ['focus --workspace 3']
+      bindings: ['alt+3']
+    - commands: ['focus --workspace 4']
+      bindings: ['alt+4']
+    - commands: ['focus --workspace 5']
+      bindings: ['alt+5']
+    - commands: ['focus --workspace 6']
+      bindings: ['alt+6']
+    - commands: ['focus --workspace 7']
+      bindings: ['alt+7']
+    - commands: ['focus --workspace 8']
+      bindings: ['alt+8']
+    - commands: ['focus --workspace 9']
+      bindings: ['alt+9']
+    - commands: ['focus --workspace 10']
+      bindings: ['alt+0']
+
+    # Move current window to another workspace
+    - commands: ['move --workspace 1']
+      bindings: ['alt+shift+1']
+    - commands: ['move --workspace 2']
+      bindings: ['alt+shift+2']
+    - commands: ['move --workspace 3']
+      bindings: ['alt+shift+3']
+    - commands: ['move --workspace 4']
+      bindings: ['alt+shift+4']
+    - commands: ['move --workspace 5']
+      bindings: ['alt+shift+5']
+    - commands: ['move --workspace 6']
+      bindings: ['alt+shift+6']
+    - commands: ['move --workspace 7']
+      bindings: ['alt+shift+7']
+    - commands: ['move --workspace 8']
+      bindings: ['alt+shift+8']
+    - commands: ['move --workspace 9']
+      bindings: ['alt+shift+9']
+    - commands: ['move --workspace 10']
+      bindings: ['alt+shift+0']
+
+    # Open Programs
+    - commands: ["shell-exec alacritty"]
+      bindings: ["alt+enter"]
+    - commands: ["shell-exec outlook"]
+      bindings: ["alt+m"]
+    - commands: ["shell-exec firefox"]
+      bindings: ["alt+b"]
+    - commands: ["shell-exec %LOCALAPPDATA%/FlowLauncher/Flow.Launcher.exe"]
+      bindings: ["alt+e"]
+
