@@ -120,12 +120,12 @@ keybindings:
       bindings: ['alt+shift+0']
 
     # Open Programs
-    - command: "shell-exec alacritty"
+    - commands: "shell-exec alacritty"
       bindings: ["alt+enter"]
-    - command: "shell-exec outlook"
+    - commands: "shell-exec outlook"
       bindings: ["alt+m"]
-    - command: "shell-exec firefox"
+    - commands: "shell-exec firefox"
       bindings: ["alt+b"]
-    - command: "shell-exec Flow.Launcher"
+    - commands: "shell-exec Flow.Launcher"
       bindings: ["alt+e"]
 
