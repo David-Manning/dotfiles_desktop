@@ -1,8 +1,7 @@
 general:
-    startup_commands: [
-        "shell-exec zebar",
-        "shell-exec autohotkey ~/.config/ahk/keys.ahk"
-    ]
+    startup_commands:
+        - "shell-exec zebar"
+        - "shell-exec autohotkey ~/.config/ahk/keys.ahk"
     shutdown_commands: []
     config_reload_commands: []
     focus_follows_cursor: true
