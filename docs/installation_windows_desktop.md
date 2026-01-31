@@ -65,11 +65,11 @@ git clone https://github.com/David-Manning/dotfiles_desktop ~\software\dotfiles_
 This tells Windows to use the links in this repo, rather than the default.
 This requires admin rights.
 ```
-New-Item -ItemType SymbolicLink -Path ~\.config\nvim -Target ~\software\dotfiles_desktop\config\nvim
+New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim -Target ~\software\dotfiles_desktop\config\nvim
 New-Item -ItemType SymbolicLink -Path ~\.glzr\glazewm -Target ~\software\dotfiles_desktop\config\glazewm
 New-Item -ItemType SymbolicLink -Path ~\.glzr\zebar -Target ~\software\dotfiles_desktop\config\zebar
-New-Item -ItemType SymbolicLink -Path ~\.config\gh -Target ~\software\dotfiles_desktop\config\gh
-New-Item -ItemType SymbolicLink -Path ~\.config\alacritty -Target ~\software\dotfiles_desktop\config\alacritty
+New-Item -ItemType SymbolicLink -Path ~\AppData\Roaming\gh -Target ~\software\dotfiles_desktop\config\gh
+New-Item -ItemType SymbolicLink -Path ~\AppData\Roaming\alacritty -Target ~\software\dotfiles_desktop\config\alacritty
 ```
 
 ## Sync Lazy.nvim
