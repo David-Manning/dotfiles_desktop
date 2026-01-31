@@ -126,6 +126,6 @@ keybindings:
       bindings: ["alt+m"]
     - commands: ["shell-exec firefox"]
       bindings: ["alt+b"]
-    - commands: ["shell-exec Flow.Launcher"]
+    - commands: ["shell-exec '%LOCALAPPDATA%\\FlowLauncher\\Flow.Launcher.exe'"]
       bindings: ["alt+e"]
 
