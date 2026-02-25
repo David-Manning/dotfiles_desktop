@@ -12,3 +12,7 @@ style.blinking = "Never"
 
 [selection]
 save_to_clipboard = true
+
+[colors.primary]
+background = "#242424"
+foreground = "#cfcfcf"
