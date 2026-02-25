@@ -8,7 +8,7 @@ These are my dotfiles for Fedora Linux with Sway window manager. They work for m
 * **Window manager**: [Sway](https://www.github.com/swaywm/sway)
 * **Status bar**: [Waybar](https://www.github.com/Alexays/Waybar)
 * **Notifications**: [Dunst](https://www.github.com/dunst-project/dunst)
-* **Terminal**: [Foot](https://www.codeberg.org/dnkl/foot)
+* **Terminal**: [Foot](https://www.github.com/alacritty/alacritty)
 * **Editor**: [Neovim](https://www.github.com/neovim/Neovim)
 * **IDE**: None
 * **File manager**: [Yazi](https://www.github.com/sxyyazi/yazi)
@@ -71,6 +71,7 @@ ln -s ~/software/dotfiles_desktop/config/nvim ~/.config/nvim
 ln -s ~/software/dotfiles_desktop/config/waybar ~/.config/waybar
 ln -s ~/software/dotfiles_desktop/config/swaylock ~/.config/swaylock
 ln -s ~/software/dotfiles_desktop/config/foot ~/.config/foot
+ln -s ~/software/dotfiles_desktop/config/alacritty ~/.config/alacritty
 ln -s ~/software/dotfiles_desktop/config/sway ~/.config/sway
 ln -s ~/software/dotfiles_desktop/config/dunst ~/.config/dunst
 ln -s ~/software/dotfiles_desktop/config/kitty ~/.config/kitty
