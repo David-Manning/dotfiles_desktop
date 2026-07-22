@@ -149,6 +149,11 @@ Then choose "customise installation"
 * Enter minutes between check for new version at julia startup: 0
 * Enter minutes between check for new version by a background task: 0
 
+Or just run:
+```
+curl -fsSL https://install.julialang.org | sh -s -- --yes --add-to-path=no --startup-selfupdate=0 --background-selfupdate=0
+```
+
 ### Minimal zshrc
 **ON SERVERS ONLY**:
 Link to the minimal zshrc. This is intended to be a minimal zshrc, not for desktop use.
