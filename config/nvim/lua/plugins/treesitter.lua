@@ -33,6 +33,7 @@ return {
                     url = "https://github.com/WardBrian/tree-sitter-stan",
                     files = { "src/parser.c" },
                     branch = "main",
+					location = "grammars/stan",
                 },
             }
 
