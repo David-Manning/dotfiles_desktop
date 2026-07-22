@@ -5,63 +5,67 @@ return {
         "nvim-treesitter/nvim-treesitter",
         lazy = false,
         build = ":TSUpdate",
+        dependencies = {
+            { "WardBrian/tree-sitter-stan" },
+        },
         config = function()
-            -- Filetype detection for Stan
+            -- 1. Filetype detection
             vim.filetype.add({
                 extension = {
-                    stan = "stan"
+                    stan = "stan",
                 },
             })
 
-            -- Register custom Stan parser BEFORE setup, via autocmd
+            -- 2. Register custom parser via the documented method
             vim.api.nvim_create_autocmd("User", {
                 pattern = "TSUpdate",
                 callback = function()
                     require("nvim-treesitter.parsers").stan = {
                         install_info = {
-                            url = "https://github.com/WardBrian/tree-sitter-stan",
-                            files = { "src/parser.c" },
-                            branch = "main",
+                            path = vim.fn.stdpath("data") .. "/lazy/tree-sitter-stan",
+                            location = "grammars/stan",
+                            generate = false,
+                            generate_from_json = false,
                         },
                     }
                 end,
             })
 
-            -- Trigger the autocmd manually for first load
+            -- 3. Also register it immediately for the current session
             require("nvim-treesitter.parsers").stan = {
                 install_info = {
-                    url = "https://github.com/WardBrian/tree-sitter-stan",
-                    files = { "src/parser.c" },
-                    branch = "main",
+                    path = vim.fn.stdpath("data") .. "/lazy/tree-sitter-stan",
+                    location = "grammars/stan",
+                    generate = false,
+                    generate_from_json = false,
                 },
             }
 
-            -- Register parser with filetype
+            -- 4. Register the language mapping
             vim.treesitter.language.register("stan", "stan")
 
-            -- New setup call (minimal - just install_dir if needed)
-            require("nvim-treesitter").setup({})
-
-            -- Install parsers
-            require("nvim-treesitter").install({
-                "stan",
-                "r",
-                "python",
-                "lua",
-                "vim", "vimdoc",
-                "latex", "bibtex",
-                "markdown", "html",
-                "yaml", "toml", "xml", "json",
-                "csv", "tsv",
-                "bash", "fish",
-                "ruby",
-                "rust",
-                "julia",
-                "sql",
-                "ssh_config"
+            -- 5. Setup nvim-treesitter
+            require("nvim-treesitter").setup({
+                ensure_installed = {
+                    "stan",
+                    "r",
+                    "python",
+                    "lua",
+                    "vim", "vimdoc",
+                    "latex", "bibtex",
+                    "markdown", "html",
+                    "yaml", "toml", "xml", "json",
+                    "csv", "tsv",
+                    "bash", "fish",
+                    "ruby",
+                    "rust",
+                    "julia",
+                    "sql",
+                    "ssh_config",
+                },
             })
 
-            -- Enable highlighting via FileType autocmd
+            -- 6. Enable highlighting
             vim.api.nvim_create_autocmd("FileType", {
                 pattern = {
                     "stan",
@@ -78,7 +82,7 @@ return {
                     "rust",
                     "julia",
                     "sql",
-                    "ssh_config"
+                    "ssh_config",
                 },
                 callback = function()
                     vim.treesitter.start()
@@ -87,3 +91,4 @@ return {
         end,
     },
 }
+
