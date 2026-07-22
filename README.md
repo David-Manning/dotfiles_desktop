@@ -149,6 +149,11 @@ Then choose "customise installation"
 * Enter minutes between check for new version at julia startup: 0
 * Enter minutes between check for new version by a background task: 0
 
+Or just run:
+```
+curl -fsSL https://install.julialang.org | sh -s -- --yes --add-to-path=no --startup-selfupdate=0 --background-selfupdate=0
+```
+
 ### Minimal zshrc
 **ON SERVERS ONLY**:
 Link to the minimal zshrc. This is intended to be a minimal zshrc, not for desktop use.
@@ -158,6 +163,13 @@ ln -s ~/software/dotfiles_desktop/config/zshrc ~/.config/zshrc
 rm ~/.zshrc
 ln -s ~/software/dotfiles_desktop/.zshrc ~/.zshrc
 ```
+
+### Stan Syntax Highlighting
+
+* Clone `https://github.com/WardBrian/tree-sitter-stan into ~/software/tree-sitter-stan/`.
+* Run `tree-sitter build --output ~/.local/share/nvim/site/parser/stan.so ~/software/tree-sitter-stan/grammars/stan/`.
+* Run `install_stan_queries.zsh` to pull the `.scm` files.
+
 
 ## Licence
 
