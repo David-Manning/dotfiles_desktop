@@ -159,6 +159,13 @@ rm ~/.zshrc
 ln -s ~/software/dotfiles_desktop/.zshrc ~/.zshrc
 ```
 
+### Stan Syntax Highlighting
+
+* Clone `https://github.com/WardBrian/tree-sitter-stan into ~/software/tree-sitter-stan/`.
+* Run `tree-sitter build --output ~/.local/share/nvim/site/parser/stan.so ~/software/tree-sitter-stan/grammars/stan/`.
+* Run `install_stan_queries.zsh` to pull the `.scm` files.
+
+
 ## Licence
 
 This project is licensed under the MIT Licence - see the [LICENSE](LICENSE) file for details.
