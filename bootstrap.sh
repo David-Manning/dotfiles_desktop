@@ -26,6 +26,7 @@ bash "$BOOTSTRAP_DIR/languages/rust.sh"
 bash "$BOOTSTRAP_DIR/languages/zsh.sh"
 
 # Install software
+bash "$BOOTSTRAP_DIR/software/anki.sh"
 bash "$BOOTSTRAP_DIR/software/file_manager.sh"
 bash "$BOOTSTRAP_DIR/software/terminal.sh"
 bash "$BOOTSTRAP_DIR/software/text_editor.sh"
