@@ -49,109 +49,17 @@ gh auth login --hostname github.com --git-protocol ssh --web --skip-ssh-key
 
 ### Install dotfiles
 
-Backup first
-```bash
-mkdir ~/software/dotfiles_desktop_backup
-cp -r ~/software/dotfiles_desktop ~/software/dotfiles_desktop_backup
-```
-
-Then clone repo
+Create the software directory and clone the repo:
 ```bash
 mkdir -p ~/software
 git clone https://github.com/David-Manning/dotfiles_desktop ~/software/dotfiles_desktop
 ```
 
-### Create Symlinks
+Run the bootstrap script:
 
-These files should be in `~/.config`, but are actually in `~/software/dotfiles_desktop`, so set up symlinks to tell Linux where the files are.
-Some symlinks will fail if the target directories already exist.
-
-```bash
-ln -s ~/software/dotfiles_desktop/config/nvim ~/.config/nvim
-ln -s ~/software/dotfiles_desktop/config/waybar ~/.config/waybar
-ln -s ~/software/dotfiles_desktop/config/swaylock ~/.config/swaylock
-ln -s ~/software/dotfiles_desktop/config/foot ~/.config/foot
-ln -s ~/software/dotfiles_desktop/config/alacritty ~/.config/alacritty
-ln -s ~/software/dotfiles_desktop/config/sway ~/.config/sway
-ln -s ~/software/dotfiles_desktop/config/dunst ~/.config/dunst
-ln -s ~/software/dotfiles_desktop/config/kitty ~/.config/kitty
-ln -s ~/software/dotfiles_desktop/config/rofi ~/.config/rofi
-ln -s ~/software/dotfiles_desktop/config/yazi ~/.config/yazi
-ln -s ~/software/dotfiles_desktop/config/mimeapps.list ~/.config/mimeapps.list
-ln -s ~/software/dotfiles_desktop/config/discord ~/.config/discord
-ln -s ~/software/dotfiles_desktop/config/spotify-player ~/.config/spotify-player
-ln -s ~/software/dotfiles_desktop/config/rainfrog ~/.config/rainfrog
 ```
-
-### Optional Dependencies
-
-The following packages are only required if you want the full Neovim experience or proper font support in your terminal and window manager.
-
-#### Neovim
-Neovim will perform a quick “dummy run” to validate the syntax of your files on save (e.g. checking for missing brackets that stop compilation).
-To enable this check, you need to install the relevant languages.
-
-Enable the CRAN repo on Fedora:
-```bash
-sudo dnf copr enable iucar/cran
-```
-
-After enabling the repository, install the packages:
-```bash
-sudo dnf install R
-sudo dnf install R-CRAN-rstan
-sudo dnf install texlive
-```
-
-Non-Fedora users can install rstan by running `install.packages("rstan")` directly in R.
-
-To install treesitter, run `npm install -g tree-sitter-cli`. On Windows, you will also need to install Visual Studio Build Tools to compile C code.
-
-#### Fonts
-
-These fonts are used in the window title bar and in the terminal and to make emojis display in the terminal.
-
-Install nerd fonts repo:
-```bash
-sudo dnf copr enable aquacash5/nerd-fonts
-```
-
-Install fonts:
-```bash
-sudo dnf install roboto-mono-nerd-fonts
-sudo dnf install jet-brains-mono-nerd-fonts
-sudo dnf install twitter-twemoji-fonts
-```
-
-#### AWS SAM CLI
-
-I use AWS SAM CLI to develop on AWS.
-
-```bash
-curl -L "https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip" -o /tmp/aws-sam-cli.zip -sS
-unzip /tmp/aws-sam-cli.zip -d /tmp/sam-installation -q
-sudo /tmp/sam-installation/install
-rm /tmp/aws-sam-cli.zip
-rm -rf /tmp/sam-installation
-sam --version
-```
-
-#### Julia
-Install Julia via Juliaup:
-```bash
-curl -fsSL https://install.julialang.org | sh
-```
-Then choose "customise installation"
-
-* Enter the folder where you want to install Juliaup: default
-* Do you want to add the Julia binaries to your PATH?: no (already in custom zshrc)
-* Do you want to add channel specific symlinks?: no
-* Enter minutes between check for new version at julia startup: 0
-* Enter minutes between check for new version by a background task: 0
-
-Or just run:
-```
-curl -fsSL https://install.julialang.org | sh -s -- --yes --add-to-path=no --startup-selfupdate=0 --background-selfupdate=0
+cd ~/software/dotfiles_desktop
+./bootstrap.sh
 ```
 
 ### Minimal zshrc
@@ -166,10 +74,13 @@ ln -s ~/software/dotfiles_desktop/.zshrc ~/.zshrc
 
 ### Stan Syntax Highlighting
 
+If Stan syntax highlighting is not working, run these:
+
 * Clone `https://github.com/WardBrian/tree-sitter-stan into ~/software/tree-sitter-stan/`.
 * Run `tree-sitter build --output ~/.local/share/nvim/site/parser/stan.so ~/software/tree-sitter-stan/grammars/stan/`.
 * Run `install_stan_queries.zsh` to pull the `.scm` files.
 
+To install treesitter, run `npm install -g tree-sitter-cli`. On Windows, you will also need to install Visual Studio Build Tools to compile C code.
 
 ## Licence
 
