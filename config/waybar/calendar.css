@@ -1,0 +1,51 @@
+/* GTK stylesheet for the yad calendar popup launched by scripts/calendar.sh
+   Colours match the Waybar bar (Solarized dark on #1a1a1a) */
+
+* {
+    font-family: "Roboto Mono Medium", "Noto Sans Mono", monospace;
+    font-size: 14px;
+}
+
+window,
+dialog,
+box {
+    background-color: #1a1a1a;
+    color: #fdf6e3;
+}
+
+calendar {
+    background-color: #1a1a1a;
+    color: #fdf6e3;
+    border: 1px solid #292b2e;
+    padding: 4px;
+}
+
+/* Month and year row, including the arrow buttons */
+calendar.header,
+calendar.button {
+    background-color: #1a1a1a;
+    color: #b58900;
+    border: none;
+}
+
+calendar.button:hover {
+    color: #fdf6e3;
+}
+
+/* Day-of-week names across the top */
+calendar.highlight {
+    color: #b58900;
+    font-weight: bold;
+}
+
+/* Days belonging to the previous or next month */
+calendar:indeterminate {
+    color: #586e75;
+}
+
+/* Selected day */
+calendar:selected {
+    background-color: #268bd2;
+    color: #fdf6e3;
+    border-radius: 3px;
+}

@@ -58,7 +58,9 @@
     "clock#2": {
         "format": "{:%Y-%m-%d}",
         "tooltip": false,
-        "interval": 3600
+        "interval": 3600,
+        // Click toggles a calendar popup (see scripts/calendar.sh)
+        "on-click": "~/.config/waybar/scripts/calendar.sh"
     },
 
     "clock#3": {

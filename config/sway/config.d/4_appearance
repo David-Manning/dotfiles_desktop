@@ -18,3 +18,8 @@ titlebar_border_thickness 1
 titlebar_padding 5 2
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #285577
 
+# Waybar calendar popup (launched by ~/.config/waybar/scripts/calendar.sh)
+# Position is relative to the workspace, so y=0 is directly under the bar.
+# x centres the 300px window on the 3420px workspace (3440 minus gaps).
+for_window [title="^waybar-calendar$"] floating enable, border none, sticky enable, move position 1560 px 0 px
+
