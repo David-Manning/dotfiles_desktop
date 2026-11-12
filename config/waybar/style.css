@@ -26,7 +26,8 @@ window#waybar {
 #network,
 #pulseaudio,
 #memory,
-#cpu,
+#custom-cpu,
+#custom-gpu,
 #battery,
 #disk,
 #tray {
@@ -59,8 +60,11 @@ window#waybar {
 #memory {
     color: #2aa198;
 }
-#cpu {
+#custom-cpu {
     color: #6c71c4;
+}
+#custom-gpu {
+    color: #cb4b16;
 }
 #battery {
     color: #859900;
@@ -72,7 +76,8 @@ window#waybar {
 #clock,
 #pulseaudio,
 #memory,
-#cpu,
+#custom-cpu,
+#custom-gpu,
 #battery,
 #disk {
     padding: 0 10px;
