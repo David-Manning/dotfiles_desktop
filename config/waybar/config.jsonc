@@ -23,7 +23,7 @@
         "custom/left-arrow-dark",
         "network",
         "pulseaudio",
-        "cpu",
+        "custom/cpu",
         "battery",
         "memory"
     ],
@@ -88,10 +88,13 @@
         "format": "RAM {used:0.1f}G",
         "format-icons": ["\uf85a"]
     },
-    "cpu": {
+    "custom/cpu": {
+        "exec": "~/.config/waybar/scripts/cpu.sh",
+        "return-type": "json",
         "interval": 1,
-        "format": "CPU {usage:2}%",
-        "format-icons": ["\uec19"]
+        "signal": 8,
+        "on-click": "~/.config/waybar/scripts/cpu.sh toggle",
+        "format": "{}"
     },
     "battery": {
         "states": {
