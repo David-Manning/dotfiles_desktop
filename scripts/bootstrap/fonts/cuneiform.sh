@@ -1,6 +1,8 @@
 # Install Cuneiform Fonts
 #--------------------------------------------------------------
 
+set -euo pipefail
+
 # Default Cuneiform fonts display incorrectly
 # Find actual ones here: https://hethport.net/cuneifont/
 

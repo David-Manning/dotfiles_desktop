@@ -6,8 +6,9 @@
 # This installs dotfiles on Fedora
 # Dependency on Fedora Sway spin
 
-# Abort if anything fails
-set -e
+# Abort if anything fails and report which script failed
+set -euo pipefail
+trap 'echo "Bootstrap failed in: $BASH_COMMAND"' ERR
 
 # Define folders
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

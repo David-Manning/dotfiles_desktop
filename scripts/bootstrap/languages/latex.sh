@@ -1,5 +1,8 @@
 # Install LaTeX
 #--------------------------------------------------------------
+
+set -euo pipefail
+
 sudo dnf install -y \
 	texlive \
 	texlive-tikz \

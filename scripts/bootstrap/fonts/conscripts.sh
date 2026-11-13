@@ -1,6 +1,8 @@
 # Install ConScript Fonts
 #--------------------------------------------------------------
 
+set -euo pipefail
+
 # Constructed scripts (Tengwar, Klingon, Sitelen Pona, etc.) are not in Unicode
 # They use Private Use Area code points agreed by the UCSUR
 # Registry here: https://www.kreativekorp.com/ucsur/

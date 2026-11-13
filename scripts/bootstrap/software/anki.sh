@@ -1,6 +1,8 @@
 ### Install Anki
 #--------------------------------------------------------------
 
+set -euo pipefail
+
 # Find URL for latest version
 ANKI_URL=$(curl -s https://api.github.com/repos/ankitects/anki/releases/latest \
     | grep -oP '"browser_download_url": "\K[^"]+linux-x86_64\.tar\.zst(?=")')

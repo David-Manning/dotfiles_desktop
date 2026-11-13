@@ -1,5 +1,8 @@
 # Install R
 #--------------------------------------------------------------
+
+set -euo pipefail
+
 sudo dnf copr enable iucar/cran -y
 sudo dnf install R-CoprManager -y
 sudo dnf install -y \

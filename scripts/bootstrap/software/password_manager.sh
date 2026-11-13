@@ -1,5 +1,8 @@
 # Install password manager
 #--------------------------------------------------------------
+
+set -euo pipefail
+
 sudo dnf install -y \
 	rbw \
 	pinentry-tty
