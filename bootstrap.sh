@@ -45,6 +45,7 @@ bash "$BOOTSTRAP_DIR/cloud/aws_cli.sh"
 bash "$BOOTSTRAP_DIR/cloud/aws_sam_cli.sh"
 
 # Install fonts
+bash "$BOOTSTRAP_DIR/fonts/conscripts.sh"
 bash "$BOOTSTRAP_DIR/fonts/cuneiform.sh"
 bash "$BOOTSTRAP_DIR/fonts/terminal.sh"
 
