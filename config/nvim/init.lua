@@ -40,6 +40,7 @@ require("languages.julia.validate")
 require("languages.latex.validate")
 require("languages.i3.syntax_highlighting")
 require("languages.R.validate")
+require("languages.R.library")
 
 -- Set up lazy.nvim with plugins
 require("lazy").setup("plugins")
