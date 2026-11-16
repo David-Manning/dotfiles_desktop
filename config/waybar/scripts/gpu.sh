@@ -6,7 +6,8 @@
 #
 # AMD only: reads the amdgpu driver's sysfs files, so it works for both
 # discrete cards and integrated APUs with no extra tools and no root.
-# If no AMD GPU is found the module shows "GPU N/A".
+# If no AMD GPU is found, or it reports no data, the module outputs empty
+# text and Waybar hides it entirely.
 #
 # Usage:
 #   gpu.sh          print the module output (called by Waybar every interval)
@@ -59,20 +60,23 @@ done
 
 MODE="$(cat "${MODE_FILE}" 2>/dev/null || echo "usage")"
 
+TEXT=""
 if [ "${MODE}" = "temp" ]; then
     TOOLTIP="Click to show GPU usage"
-    if [ -r "${TEMP_FILE}" ]; then
+    if [ -n "${TEMP_FILE}" ] && [ -r "${TEMP_FILE}" ]; then
         TEXT="GPU $(( ($(cat "${TEMP_FILE}") + 500) / 1000 ))°C"
-    else
-        TEXT="GPU N/A"
     fi
 else
     TOOLTIP="Click to show GPU temperature"
-    if [ -r "${DEVICE}/gpu_busy_percent" ]; then
+    if [ -n "${DEVICE}" ] && [ -r "${DEVICE}/gpu_busy_percent" ]; then
         TEXT="GPU $(printf '%2d' "$(cat "${DEVICE}/gpu_busy_percent")")%"
-    else
-        TEXT="GPU N/A"
     fi
+fi
+
+# No GPU data available: output empty text so Waybar hides the module
+if [ -z "${TEXT}" ]; then
+    printf '{"text": ""}\n'
+    exit 0
 fi
 
 printf '{"text": "%s", "tooltip": "%s", "class": "%s"}\n' "${TEXT}" "${TOOLTIP}" "${MODE}"
