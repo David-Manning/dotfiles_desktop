@@ -60,6 +60,9 @@ bash "$BOOTSTRAP_DIR/fonts/conscripts.sh"
 bash "$BOOTSTRAP_DIR/fonts/cuneiform.sh"
 bash "$BOOTSTRAP_DIR/fonts/terminal.sh"
 
+# Set timezone and network time
+bash "$BOOTSTRAP_DIR/system/set_timezone.sh"
+
 
 
 
