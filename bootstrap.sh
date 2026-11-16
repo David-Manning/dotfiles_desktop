@@ -14,17 +14,27 @@ trap 'echo "Bootstrap failed in: $BASH_COMMAND"' ERR
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BOOTSTRAP_DIR="$SCRIPT_DIR/scripts/bootstrap"
 
-# System files first (future proofing)
-bash "$BOOTSTRAP_DIR/system/printer.sh"
+# Set up symlinks first - they depend on nothing else
+# If a later script fails, the configs are still in place
+bash "$BOOTSTRAP_DIR/symlinks/symlinks.sh"
+
+# System files (future proofing)
+# Printer setup is disabled - run the script by hand if needed
+# bash "$BOOTSTRAP_DIR/system/printer.sh"
 
 # Install languages
 bash "$BOOTSTRAP_DIR/languages/R.sh"
 bash "$BOOTSTRAP_DIR/languages/go.sh"
-bash "$BOOTSTRAP_DIR/languages/julia.sh"
+# Julia is disabled - run the script by hand if needed
+# bash "$BOOTSTRAP_DIR/languages/julia.sh"
 bash "$BOOTSTRAP_DIR/languages/latex.sh"
 bash "$BOOTSTRAP_DIR/languages/python.sh"
 bash "$BOOTSTRAP_DIR/languages/rust.sh"
 bash "$BOOTSTRAP_DIR/languages/zsh.sh"
+
+# rustup installs cargo into ~/.cargo/bin, which is not on the PATH of this shell
+# Add it here so the scripts below that call cargo can find it
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Install software
 bash "$BOOTSTRAP_DIR/software/anki.sh"
@@ -49,9 +59,6 @@ bash "$BOOTSTRAP_DIR/cloud/aws_sam_cli.sh"
 bash "$BOOTSTRAP_DIR/fonts/conscripts.sh"
 bash "$BOOTSTRAP_DIR/fonts/cuneiform.sh"
 bash "$BOOTSTRAP_DIR/fonts/terminal.sh"
-
-# Set up symlinks last
-bash "$BOOTSTRAP_DIR/symlinks/symlinks.sh"
 
 
 

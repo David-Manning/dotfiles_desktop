@@ -62,6 +62,14 @@ cd ~/software/dotfiles_desktop
 ./bootstrap.sh
 ```
 
+The bootstrap installs zsh but does not make it the login shell, because that asks for a password. Once the bootstrap has finished, run this and then log out and back in:
+
+```bash
+chsh -s /usr/bin/zsh
+```
+
+The printer and Julia scripts are not called by the bootstrap. Run them by hand from `scripts/bootstrap/` if needed.
+
 ### Minimal zshrc
 **ON SERVERS ONLY**:
 Link to the minimal zshrc. This is intended to be a minimal zshrc, not for desktop use.
