@@ -1,2 +1,4 @@
 config/gh/hosts.yml
 config/glazewm/errors.log
+config/vlc/*
+!config/vlc/vlcrc
