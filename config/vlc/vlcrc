@@ -1,0 +1,33 @@
+[core]
+# Subtitles off by default
+sub-language=none
+sub-autodetect-file=0
+
+# Even out loud and quiet passages using the compressor below
+audio-filter=compressor
+
+# No pitch correction when playback speed is changed
+audio-time-stretch=0
+
+# No on-screen text (volume, seek position, title)
+osd=0
+
+[compressor]
+compressor-rms-peak=0.000000
+compressor-release=260.399994
+compressor-threshold=-23.789999
+compressor-ratio=20.000000
+compressor-knee=1.650000
+compressor-makeup-gain=14.780000
+
+[freetype]
+# Subtitle font
+freetype-font=Noto Serif
+
+[qt]
+# Skip the privacy question on first launch
+qt-privacy-ask=0
+
+[avi]
+# Repair broken AVI files without asking
+avi-index=1

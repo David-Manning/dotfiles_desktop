@@ -27,7 +27,7 @@ create_symlink()
 configs=(
     nvim waybar swaylock foot alacritty sway
     dunst kitty rofi yazi discord rainfrog
-    spotify-player
+    spotify-player vlc
 )
 
 for config in "${configs[@]}"; do
