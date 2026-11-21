@@ -62,11 +62,15 @@ cd ~/software/dotfiles_desktop
 ./bootstrap.sh
 ```
 
+### Make zsh the default
+
 The bootstrap installs zsh but does not make it the login shell, because that asks for a password. Once the bootstrap has finished, run this and then log out and back in:
 
 ```bash
 chsh -s /usr/bin/zsh
 ```
+
+### Install Julia
 
 The Julia script is not called by the bootstrap. Run it by hand from `scripts/bootstrap/languages/` if needed.
 
@@ -105,16 +109,6 @@ sudo lpoptions -d HLL3230CDW
 
 ```sh
 ln -s ~/software/dotfiles_desktop/config/firefox/user.js <root directory>/user.js
-```
-
-### Minimal zshrc
-**ON SERVERS ONLY**:
-Link to the minimal zshrc. This is intended to be a minimal zshrc, not for desktop use.
-
-```
-ln -s ~/software/dotfiles_desktop/config/zshrc ~/.config/zshrc
-rm ~/.zshrc
-ln -s ~/software/dotfiles_desktop/.zshrc ~/.zshrc
 ```
 
 ### Stan Syntax Highlighting

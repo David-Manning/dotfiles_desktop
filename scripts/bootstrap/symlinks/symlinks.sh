@@ -27,7 +27,7 @@ create_symlink()
 configs=(
     nvim waybar swaylock foot alacritty sway
     dunst kitty rofi yazi discord rainfrog
-    spotify-player vlc
+    spotify-player vlc zshrc
 )
 
 for config in "${configs[@]}"; do
@@ -35,3 +35,7 @@ for config in "${configs[@]}"; do
 done
 
 create_symlink "${DOTFILES_DIR}/config/mimeapps.list" "${HOME}/.config/mimeapps.list"
+
+# zsh only reads ~/.zshrc, so link the stub that sources ~/.config/zshrc/zshrc.zsh
+rm -f "${HOME}/.zshrc"
+create_symlink "${DOTFILES_DIR}/.zshrc" "${HOME}/.zshrc"

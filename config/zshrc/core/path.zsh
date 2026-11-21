@@ -13,6 +13,7 @@ path=(
 	$HOME/go/bin
 	$HOME/.cargo/bin
 	$HOME/.juliaup/bin
+	$HOME/.opencode/bin
 	$path
 )
 
