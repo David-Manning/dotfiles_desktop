@@ -98,6 +98,15 @@ sudo lpadmin -p HLL3230CDW \
 sudo lpoptions -d HLL3230CDW
 ```
 
+### Install Firefox
+1. Open `about:profiles` in Firefox. Find the profile marked "This is the profile in use" and copy its Root Directory.
+2. Close Firefox.
+3. Link `user.js` into that folder, replacing `<root directory>` with the path you copied:
+
+```sh
+ln -s ~/software/dotfiles_desktop/config/firefox/user.js <root directory>/user.js
+```
+
 ### Minimal zshrc
 **ON SERVERS ONLY**:
 Link to the minimal zshrc. This is intended to be a minimal zshrc, not for desktop use.
