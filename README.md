@@ -1,6 +1,11 @@
 # My Dotfiles
 
-These are my dotfiles for Fedora Linux with Sway window manager. They work for me and my workflow. They may not work for you and your workflow. Dotfiles are very personal. I recommend against copying anyone's dotfiles directly and in favour of looking at the screenshots, reading the files, and deciding what would work for you. I also recommend looking at other people's dotfiles and see how they solve the same problems.
+These are my dotfiles for Fedora Linux with Sway window manager. 
+They work for me and my workflow. 
+They may not work for you and your workflow. 
+Dotfiles are very personal. 
+I recommend against copying anyone's dotfiles directly and in favour of looking at the screenshots, reading the files, and deciding what would work for you. 
+I also recommend looking at other people's dotfiles and see how they solve the same problems.
 
 ## Details
 
@@ -45,6 +50,12 @@ sudo dnf install gh -y
 Run this to create auth tokens (it will automatically open a browser to authenticate):
 ```bash
 gh auth login --hostname github.com --git-protocol ssh --web --skip-ssh-key
+```
+
+Install gh milestone extension:
+
+```bash
+gh extension install valeriobelli/gh-milestone
 ```
 
 ### Install dotfiles
