@@ -19,6 +19,7 @@ create_symlink()
     elif [ -e "${target}" ]; then
         echo "WARNING: ${target} exists and is not a symlink — skipping"
     else
+        mkdir -p "$(dirname "${target}")"
         ln -s "${source}" "${target}"
         echo "Linked: ${target}"
     fi
