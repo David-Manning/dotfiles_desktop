@@ -45,6 +45,7 @@ bash "$BOOTSTRAP_DIR/software/video_editor.sh"
 bash "$BOOTSTRAP_DIR/software/video_player.sh"
 
 # Install CLI tools
+bash "$BOOTSTRAP_DIR/cli_tools/claude_code.sh"
 bash "$BOOTSTRAP_DIR/cli_tools/csvlens.sh"
 bash "$BOOTSTRAP_DIR/cli_tools/duckdb.sh"
 bash "$BOOTSTRAP_DIR/cli_tools/file_tools.sh"

@@ -39,3 +39,9 @@ create_symlink "${DOTFILES_DIR}/config/mimeapps.list" "${HOME}/.config/mimeapps.
 # zsh only reads ~/.zshrc, so link the stub that sources ~/.config/zshrc/zshrc.zsh
 rm -f "${HOME}/.zshrc"
 create_symlink "${DOTFILES_DIR}/.zshrc" "${HOME}/.zshrc"
+
+# CLAUDE.md default
+create_symlink "${DOTFILES_DIR}/config/claude/CLAUDE.md" "${HOME}/.claude/CLAUDE.md"
+create_symlink "${DOTFILES_DIR}/config/claude/settings.json" "${HOME}/.claude/settings.json"
+create_symlink "${DOTFILES_DIR}/config/claude/agents" "${HOME}/.claude/agents"
+
