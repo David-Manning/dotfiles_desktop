@@ -58,6 +58,25 @@ Install gh milestone extension:
 gh extension install valeriobelli/gh-milestone
 ```
 
+### Set up Git
+
+Create an ssh key for Github:
+
+```bash
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+[ -f ~/.ssh/github_david_manning ] || ssh-keygen -t ed25519 -C "$(hostname)" -f ~/.ssh/github_david_manning
+```
+
+Print the **public** key:
+```bash
+cat ~/.ssh/github_david_manning.pub
+```
+
+Upload the **public** key to Github.
+Go to https://github.com/settings/keys and click New SSH Key.
+Pick a suitable title, add the key as an Authentication Key.
+
 ### Install dotfiles
 
 Create the software directory and clone the repo:

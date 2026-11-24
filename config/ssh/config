@@ -1,0 +1,6 @@
+Host github-david-manning
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github_david_manning
+    IdentitiesOnly yes
+

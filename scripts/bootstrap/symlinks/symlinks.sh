@@ -46,3 +46,11 @@ create_symlink "${DOTFILES_DIR}/config/claude/CLAUDE.md" "${HOME}/.claude/CLAUDE
 create_symlink "${DOTFILES_DIR}/config/claude/settings.json" "${HOME}/.claude/settings.json"
 create_symlink "${DOTFILES_DIR}/config/claude/agents" "${HOME}/.claude/agents"
 
+# Git config
+rm -f "${HOME}/.gitconfig"
+create_symlink "${DOTFILES_DIR}/config/gitconfig/gitconfig" "${HOME}/.gitconfig"
+
+# SSH config
+rm -f "${HOME}/.ssh/config"
+create_symlink "${DOTFILES_DIR}/config/ssh/config" "${HOME}/.ssh/config"
+

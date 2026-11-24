@@ -1,0 +1,13 @@
+[user]
+	name = David-Manning
+	email = 16976385+David-Manning@users.noreply.github.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[http]
+	postBuffer = 1048576000
